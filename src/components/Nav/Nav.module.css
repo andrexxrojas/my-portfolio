@@ -1,0 +1,62 @@
+.nav-container {
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Needed for absolute centering of logo */
+}
+
+.left,
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    font-family: "Geist Bold";
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    text-transform: uppercase;
+    margin: 0;
+    user-select: none;
+}
+
+.list-container {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    font-family: "Geist Medium";
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.cta-button {
+    font-family: "Geist Medium";
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    background-color: #0a0a0a;
+    color: #fafafa;
+    border: none;
+    outline: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e5e5e5;
+    color: #0a0a0a;
+}

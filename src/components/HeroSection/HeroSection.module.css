@@ -1,0 +1,31 @@
+.hero-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-text {
+    font-family: "Geist Regular";
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    max-width: 430px;
+    text-align: center;
+    padding: 0 60px;
+}
+
+.hero-hook {
+    font-family: "Geist SemiBold";
+    font-size: clamp(2rem, 9vw, 9rem);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 100%;
+    padding-top: clamp(4rem, 30vh, 10rem);
+    padding-left: 10px;
+    padding-right: 10px;
+    user-select: none;
+}
+
+.animated-word {
+    display: inline-block;
+    will-change: transform;
+}
+
