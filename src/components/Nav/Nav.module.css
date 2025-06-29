@@ -40,6 +40,23 @@
     list-style: none;
     user-select: none;
     cursor: pointer;
+    position: relative;
+}
+
+.list-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transform-origin: left;
+    width: 0;
+    height: 1px;
+    background-color: #0a0a0a;
+    transition: 0.3s ease;
+}
+
+.list-item:hover::before {
+    width: 100%;
 }
 
 .cta-button {
