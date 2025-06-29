@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; /* Needed for absolute centering of logo */
+    position: relative;
 }
 
 .left,

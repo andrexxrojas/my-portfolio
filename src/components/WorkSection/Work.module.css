@@ -1,0 +1,25 @@
+.wrapper {
+    /*max-width: 1200px;*/
+    /*margin: 0 auto;*/
+    padding-inline: 1.2rem; /* adds left and right spacing */
+}
+
+.work-container {
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+
+    padding-block: 2rem;
+    /*padding-inline: 1.2rem;*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+.work-box {
+    border: 1px solid #b5b5b5;
+    background-color: #b5b5b5;
+
+    aspect-ratio: 16 / 10;
+    margin: 0;
+    padding: 0;
+}
