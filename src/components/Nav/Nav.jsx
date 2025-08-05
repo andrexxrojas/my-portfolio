@@ -8,8 +8,10 @@ export default function Nav({ onTalkClick }) {
     const talkRef = useRef(null);
 
     useEffect(() => {
-        const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.4 } });
+        // Skip animation if screen width is less than or equal to 768px
+        if (window.innerWidth <= 768) return;
 
+        const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.4 } });
         const links = gsap.utils.toArray(`.${styles["list-item"]}`);
 
         tl.fromTo(

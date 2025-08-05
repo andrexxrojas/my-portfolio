@@ -11,6 +11,7 @@ export default function HeroSection() {
     const wordRef = useRef(null);
     const indexRef = useRef(0);
     const introRef = useRef(null);
+    const tagRef = useRef(null);
 
     useEffect(() => {
         let interval;
@@ -20,13 +21,13 @@ export default function HeroSection() {
         tl.fromTo(
             introRef.current,
             { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out"},
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1},
         )
             .fromTo(
-                root.current,
+                tagRef.current,
                 { opacity: 0, y: 20 },
                 { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
-                "+=0"
+                "<0.2"
             )
 
         scope.current = createScope({ root }).add(() => {
@@ -71,7 +72,7 @@ export default function HeroSection() {
                 intuitive, and user-centered.
             </p>
 
-            <h1 className={styles['hero-hook']}>
+            <h1 className={styles['hero-hook']} ref={tagRef}>
                 Craft {' '}
                 <span className={styles['animated-word']} ref={wordRef}> {alternatives[0]}</span>
                 <br/>
