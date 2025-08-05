@@ -8,7 +8,7 @@ export default function Nav({ onTalkClick }) {
     const talkRef = useRef(null);
 
     useEffect(() => {
-        const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.6 } });
+        const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.4 } });
 
         const links = gsap.utils.toArray(`.${styles["list-item"]}`);
 
@@ -21,7 +21,7 @@ export default function Nav({ onTalkClick }) {
                 talkRef.current,
                 { opacity: 0, y: 20},
                 { opacity: 1, y: 0, duration: 0.4 },
-                "<0.7"
+                "<0.5"
             )
             .fromTo(
                 logoRef.current,

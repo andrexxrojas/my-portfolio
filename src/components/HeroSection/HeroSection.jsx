@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
-import { animate, createScope, eases, createTimeline } from "animejs";
+import { createScope, eases, createTimeline } from "animejs";
 import styles from "./HeroSection.module.css";
+import { gsap } from "gsap";
 
 const alternatives = ["Seamless", "Intuitive", "Dynamic", "Immersive"];
 
@@ -9,9 +10,24 @@ export default function HeroSection() {
     const scope = useRef(null);
     const wordRef = useRef(null);
     const indexRef = useRef(0);
+    const introRef = useRef(null);
 
     useEffect(() => {
         let interval;
+
+        const tl = gsap.timeline();
+
+        tl.fromTo(
+            introRef.current,
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out"},
+        )
+            .fromTo(
+                root.current,
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+                "+=0"
+            )
 
         scope.current = createScope({ root }).add(() => {
             interval = setInterval(() => {
@@ -49,7 +65,7 @@ export default function HeroSection() {
 
     return (
         <section ref={root} className={styles['hero-section-container']}>
-            <p className={styles['intro-text']}>
+            <p className={styles['intro-text']} ref={introRef}>
                 Hey! I’m Jay Andre, a full-stack developer who loves bringing ideas to
                 life through code. I enjoy creating digital experiences that are functional,
                 intuitive, and user-centered.
