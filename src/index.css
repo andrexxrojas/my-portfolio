@@ -32,3 +32,24 @@
   font-family: "Geist SemiBold";
   src: url("./assets/fonts/Geist-SemiBold.otf");
 }
+
+:root {
+  --font-light: "Geist Light";
+  --font-regular: "Geist Regular";
+  --font-medium: "Geist Medium";
+  --font-semibold: "Geist SemiBold";
+  --font-bold: "Geist Bold";
+  --font-black: "Geist Black";
+
+  --font-size-xs: clamp(0.75rem, 1.25vw, 0.875rem);  /* For logos, small text */
+  --font-size-sm: clamp(0.875rem, 1.5vw, 1rem);      /* For nav links, buttons */
+  --font-size-md: clamp(1rem, 2vw, 1.25rem);         /* Base body text */
+  --font-size-lg: clamp(1.25rem, 3vw, 1.5rem);       /* Section headings */
+  --font-size-xl: clamp(1.5rem, 4vw, 2.25rem);       /* Hero titles */
+  --font-size-2xl: clamp(2rem, 6vw, 3rem);           /* Page titles */
+
+  --color-text-primary: #0A0A0A;
+  --color-bg-primary: #FFFFFF;
+
+  --overlay-padding: 1rem;
+}
