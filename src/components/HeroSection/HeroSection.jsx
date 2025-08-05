@@ -15,13 +15,18 @@ export default function HeroSection() {
 
     useEffect(() => {
         let interval;
+        let delay = 1;
+
+        if (window.innerWidth <= 768) {
+            delay = 0;
+        }
 
         const tl = gsap.timeline();
 
         tl.fromTo(
             introRef.current,
             { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1},
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: delay},
         )
             .fromTo(
                 tagRef.current,
