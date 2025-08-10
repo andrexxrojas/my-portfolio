@@ -24,6 +24,12 @@
     user-select: none;
 }
 
+.status-text {
+    font-family: "Geist Regular";
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    margin-bottom: 2rem;
+}
+
 .animated-word {
     display: inline-block;
     will-change: transform;

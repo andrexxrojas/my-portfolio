@@ -26,7 +26,7 @@ export default function Nav({ onTalkClick }) {
                 "<0.5"
             )
             .fromTo(
-                logoRef.current,
+                logoRef.current,  
                 { opacity: 0, y: 20 },
                 { opacity: 1, y: 0 },
             )
