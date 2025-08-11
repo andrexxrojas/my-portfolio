@@ -28,6 +28,33 @@
     font-family: "Geist Regular";
     font-size: clamp(0.75rem, 1.5vw, 0.875rem);
     margin-bottom: 2rem;
+    position: relative;
+}
+
+.status-text::before {
+    content: "";
+    aspect-ratio: 1;
+    width: 10px;
+    height: 10px;
+    background-color: #ff450c;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    animation: blink-anim 2s ease-out infinite;
+}
+
+@keyframes blink-anim {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .animated-word {

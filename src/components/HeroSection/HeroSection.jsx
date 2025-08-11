@@ -13,6 +13,7 @@ export default function HeroSection() {
     const indexRef = useRef(0);
     const introRef = useRef(null);
     const tagRef = useRef(null);
+    const statusRef = useRef(null);
 
     useEffect(() => {
         let interval;
@@ -34,6 +35,11 @@ export default function HeroSection() {
                 { opacity: 0, y: 20 },
                 { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
                 "<0.2"
+            )
+            .fromTo(
+                statusRef.current,
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
             )
 
         scope.current = createScope({ root }).add(() => {
@@ -80,7 +86,7 @@ export default function HeroSection() {
 
     return (
         <section ref={root} className={styles['hero-section-container']}>
-            <p className={styles["status-text"]}>{status}</p>
+            <p className={styles["status-text"]} ref={statusRef}>{status}</p>
 
             <p className={styles['intro-text']} ref={introRef}>
                 Hey! I’m Jay Andre, a full-stack developer who loves bringing ideas to
