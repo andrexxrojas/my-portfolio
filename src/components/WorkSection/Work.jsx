@@ -35,7 +35,7 @@ export default function Work() {
         return () => {
             tl.scrollTrigger?.kill()
         }
-    })
+    },[]);
 
     return (
         <div className={styles["wrapper"]}>
