@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+}
+
 @font-face {
   font-family: "Geist Black";
   src: url("./assets/fonts/Geist-Black.otf");
