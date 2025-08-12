@@ -37,6 +37,7 @@ export default function Work() {
         )
 
         return () => {
+            tl.kill();
             tl.scrollTrigger?.kill()
         }
     },[]);
