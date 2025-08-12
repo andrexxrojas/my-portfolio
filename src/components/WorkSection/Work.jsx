@@ -7,8 +7,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Work() {
     const containerRef = useRef(null);
+    const animationRan = useRef(false);
 
     useEffect(() => {
+        if (animationRan.current) return;
+        animationRan.current = true;
+
         const boxes = gsap.utils.toArray(`.${styles["work-box"]}`)
 
         const tl = gsap.timeline({
