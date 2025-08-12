@@ -1,7 +1,7 @@
 import styles from "./Work.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger} from "gsap/ScrollTrigger";
-import { useRef, useEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,7 +9,7 @@ export default function Work() {
     const containerRef = useRef(null);
     const animationRan = useRef(false);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (animationRan.current) return;
         animationRan.current = true;
 
