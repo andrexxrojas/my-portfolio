@@ -25,23 +25,19 @@
 }
 
 .status-text {
-    font-family: "Geist Regular";
+    font-family: "Geist Medium";
     font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    color: #d4d4d4;
     margin-bottom: 2rem;
     position: relative;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #a3a3a3;
+    background-color: #f5f5f5;
 }
 
-.status-text::before {
-    content: "";
-    aspect-ratio: 1;
-    width: 10px;
-    height: 10px;
-    background-color: #ff450c;
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    transform: translate(0, -50%);
-    border-radius: 50%;
+.status-at {
+    font-family: "Geist SemiBold";
 }
 
 .animated-word {

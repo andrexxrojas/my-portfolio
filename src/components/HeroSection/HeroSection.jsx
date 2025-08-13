@@ -78,7 +78,7 @@ export default function HeroSection() {
 
     return (
         <section ref={root} className={styles['hero-section-container']}>
-            <p className={styles["status-text"]} ref={statusRef}>App Dev Intern @ Taktyl Studios</p>
+            <p className={styles["status-text"]} ref={statusRef}>App Dev Intern <span className={styles["status-at"]}>@</span> Taktyl Studios</p>
 
             <p className={styles['intro-text']} ref={introRef}>
                 Hey! I’m Jay Andre, a full-stack developer who loves bringing ideas to
