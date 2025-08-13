@@ -6,7 +6,6 @@ import { gsap } from "gsap";
 const alternatives = ["Seamless", "Intuitive", "Dynamic", "Immersive"];
 
 export default function HeroSection() {
-    const [status, setStatus] = useState("");
     const root = useRef(null);
     const scope = useRef(null);
     const wordRef = useRef(null);
@@ -79,14 +78,18 @@ export default function HeroSection() {
     useEffect(() => {
         fetch(`${import.meta.env.VITE_BACKEND_URL}/status`)
             .then((res) => res.json())
-            .then((data) => setStatus(data.message))
+            .then((data) => {
+                if (statusRef.current) {
+                    statusRef.current.textContent = data.message;
+                }
+            })
             .catch((err) => console.error("Error fetching status:", err));
     }, []);
 
 
     return (
         <section ref={root} className={styles['hero-section-container']}>
-            <p className={styles["status-text"]} ref={statusRef}>{status}</p>
+            <p className={styles["status-text"]} ref={statusRef}></p>
 
             <p className={styles['intro-text']} ref={introRef}>
                 Hey! I’m Jay Andre, a full-stack developer who loves bringing ideas to
