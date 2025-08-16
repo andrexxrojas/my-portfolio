@@ -65,20 +65,20 @@
 }
 
 .cta-button {
-    font-family: "Geist Medium";
-    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
-    background-color: #0a0a0a;
+    font-family: var(--font-medium);
+    font-size: var(-font-size-xs);
+    background-color: #09090b;
     color: #fafafa;
     border: none;
     outline: none;
-    padding: 10px 18px;
-    border-radius: 4px;
+    padding: 10px 14px;
+    border-radius: 6px;
     user-select: none;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #e5e5e5;
-    color: #0a0a0a;
+    background-color: #27272a;
+    color: #fafafa;
 }

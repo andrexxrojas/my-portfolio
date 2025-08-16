@@ -52,6 +52,8 @@ body {
   --font-size-xl: clamp(1.5rem, 4vw, 2.25rem);       /* Hero titles */
   --font-size-2xl: clamp(2rem, 6vw, 3rem);           /* Page titles */
 
+  --font-size-input: clamp(0.875rem, 0.8vw, 1rem);
+
   --color-text-primary: #0A0A0A;
   --color-bg-primary: #FFFFFF;
 

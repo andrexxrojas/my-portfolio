@@ -33,7 +33,7 @@
     align-items: flex-end;
     width: 100%;
     max-width: 550px;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 }
 
 .form-container {
@@ -45,7 +45,7 @@
 
 .form-container input[type="text"] {
     font-family: var(--font-regular), sans-serif;
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-input);
     color: var(--color-text-primary);
     border: none;
     outline: none;
